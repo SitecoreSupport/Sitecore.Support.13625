@@ -41,7 +41,9 @@
         {
           if (!_coordinatorService.ShouldProcess(item5))
           {
-            break;
+            #region Modified code
+            continue;
+            #endregion
           }
           Item item3 = item5.Database.GetItem(item5.ID, latestVersion.Language).Versions.AddVersion();
           item3.Editing.BeginEdit();
